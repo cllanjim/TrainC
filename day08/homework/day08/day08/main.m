@@ -249,19 +249,56 @@
 //函数 1,判断两个点是否在一条水平线上。
 //函数 2,判断两个点是否在一条垂直线上。 函数
 //3,判断两个点是否相等。
-
-int main(){
+typedef struct point{
+    int x;
+    int y;
+}Pointm;
+int isHorizontal(Pointm point1,Pointm point2){
+    if (point1.y==point2.y) {
+        return 1;
+    }
     return 0;
-    1
-    1
-    1
+}
+int isvertical(Pointm point1,Pointm point2){
+    if (point1.x==point2.x) {
+        return 1;
+    }
+    return 0;
+}
+int isSamePoint(Pointm point1,Pointm point2){
+    if (isHorizontal(point1, point2)&&isvertical(point1, point2)) {
+        return 1;
+    }
+    return 0;
 }
 
 //5.(***)创建一个 Size 结构体,包含 width,height 两个变量。 并写以下函数:
 //函数 1,判断两个 size 是否等宽。
 //函数 2,判断两个 size 是否在等高。 函数
 //3,判断两个 size 是否相等。
+typedef struct size{
+    int width;
+    int height;
+}Sizem;
 
+int isSameWidth(Sizem size1,Sizem size2){
+    if (size1.width==size2.width) {
+        return 1;
+    }
+    return 0;
+}
+int isSameHeight(Sizem size1,Sizem size2){
+    if (size1.height==size2.height) {
+        return 1;
+    }
+    return 0;
+}
+int isSameSize(Sizem size1,Sizem size2){
+    if (isSameWidth(size1, size2)&&isSameHeight(size1, size2)) {
+        return 1;
+    }
+    return 0;
+}
 
 //6.(***)创建一个 Rect 结构体,包含 origin,size 两个变量。其中 origin 是
 //Point 类型的,size 是 Size 类型的。 并写以下函数:
@@ -269,18 +306,29 @@ int main(){
 //函数 2,判断两个 Rect 是否包含某个 Point。 函数
 //3,判断一个 Rect 是否在另外一个 Rect 中。
 
+typedef struct{
+    Pointm origin;
+    Sizem size;
+}Rectm;
 
-//int main(int argc, const char * argv[])
-//{
-//
-//    int hh=5;
-//    int jj[hh];
-//    for (int i=0; i<5; i++) {
-//        scanf("%d",&jj[i]);
-//    }
-//    for (int i=0; i<5; i++) {
-//        printf("%d",jj[i]);
-//    }
-//    return 0;
-//}
+int isIntersect(Rectm rect1,Rectm rect2){
+    
+    
+    return 0;
+}
+int isOnePointOnAnotherRect(Rectm rect1,Rectm rect2){
+    
+    return 0;
+}
+int isOneRectOnAnotherRect(Rectm rect1,Rectm rect2){
+    return 0;
+}
+
+
+
+
+int main(int argc, const char * argv[])
+{
+    return 0;
+}
 

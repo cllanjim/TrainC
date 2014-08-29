@@ -35,17 +35,17 @@ int main(int argc, const char * argv[])
 //    int *p= &x;
 //    short m=*(p+4);
 //    printf("%c",m);
-//    int a = 17;
-//    int b = 285212672;
-//    printf("%p\n",&a);
-//    printf("%p\n",&b);
-//    int *p = &b;
-//    printf("%p\n",p);
-//    char *pp = (char *)p;
-//    pp+=3;
-//    int *m =(int *)pp;
-//    printf("%p\n",m);
-//    printf("%d",*m);
+    int a = 17;
+    int b = 285212672;
+    printf("%p\n",&a);
+    printf("%p\n",&b);
+    int *p = &b;
+    printf("%p\n",p);
+    char *pp = (char *)p;
+    pp+=2;
+    int *m =(int *)pp;
+    printf("%p\n",m);
+    printf("%d",*m);
 
 //    int x = 285212705;
 //    printf("%c\n",x);
@@ -58,10 +58,10 @@ int main(int argc, const char * argv[])
 //        printf("%d",i);
 //    }
     
-    char a,b;
-    scanf("%c %c",&a,&b);
-    //getchar();
-    printf("%c %c",a,b);
+//    char a,b;
+//    scanf("%c %c",&a,&b);
+//    //getchar();
+//    printf("%c %c",a,b);
     
     
 }
