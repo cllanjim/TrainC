@@ -252,6 +252,9 @@
 
 int main(){
     return 0;
+    1
+    1
+    1
 }
 
 //5.(***)创建一个 Size 结构体,包含 width,height 两个变量。 并写以下函数:
