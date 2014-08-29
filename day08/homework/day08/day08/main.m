@@ -307,20 +307,89 @@ int isSameSize(Sizem size1,Sizem size2){
 //3,判断一个 Rect 是否在另外一个 Rect 中。
 
 typedef struct{
-    Pointm origin;
+    Pointm origin;//矩形中心坐标
     Sizem size;
 }Rectm;
 
 int isIntersect(Rectm rect1,Rectm rect2){
+//    //√[(x1-x2)²+(y1-y2)²]
+//    double len = sqrt(pow(rect1.origin.x-rect2.origin.x, 2)+pow(rect2.origin.y-rect2.origin.y,2));
+//    //两个矩形的重心距离在X和Y轴上都小于两个矩形长或宽的一半之和
+//    if (len<abs(rect1.size.width/2.0+rect2.size.width/2.0)&&len<abs(rect1.size.height/2.0+rect2.size.height/2.0)) {
+//        return 1;
+//    }
     
+    
+//    bool isRectOverlap(const RECT& r1, const RECT& r2)
+//    {
+//        return !(r1.left > r2.right || r1.top > r2.bottom || r2.left > r1.right || r2.top > r1.bottom);
+//    }
+//    
+//    运用逆向思维考虑这个问题或许会好一点.
+//    
+//    1. 判断 r1 的左上角是否在 r2 的右下角的  下面或者右面
+//    2. 判断 r2 的左上角是否在 r1 的右下角的  下面或者右面
+//    3. 结果求反.
+    double rect1XLeft,rect1XRigth;
+    double rect1YUp,rect1YDown;
+    //rect1的四个边界
+    rect1XLeft = rect1.origin.x - rect1.size.width/2.0;
+    rect1XRigth = rect1.origin.x + rect1.size.width/2.0;
+    rect1YUp = rect1.origin.y + rect1.size.height/2.0;
+    rect1YDown = rect1.origin.y -rect1.size.height/2.0;
+    double rect2XLeft,rect2XRigth;
+    double rect2YUp,rect2YDown;
+    //rect2的四个边界
+    rect2XLeft = rect2.origin.x - rect2.size.width/2.0;
+    rect2XRigth = rect2.origin.x + rect2.size.width/2.0;
+    rect2YUp = rect2.origin.y + rect2.size.height/2.0;
+    rect2YDown = rect2.origin.y - rect2.size.height/2.0;
+    if (!(rect1XLeft > rect2XRigth || rect1YUp > rect2YDown || rect2XLeft > rect1XRigth || rect2YUp > rect1YDown)) {
+        return 1;
+    }
     
     return 0;
 }
 int isOnePointOnAnotherRect(Rectm rect1,Rectm rect2){
     
+    //如果rect1的点在rect2上
+    double rect1XLeft,rect1XRigth;
+    double rect1YUp,rect1YDown;
+    //rect1的四个边界
+    rect1XLeft = rect1.origin.x - rect1.size.width/2.0;
+    rect1XRigth = rect1.origin.x + rect1.size.width/2.0;
+    rect1YUp = rect1.origin.y + rect1.size.height/2.0;
+    rect1YDown = rect1.origin.y -rect1.size.height/2.0;
+    
+    if (rect2.origin.x>rect1XLeft&&rect2.origin.x<rect1XRigth) {
+        if(rect2.origin.y>rect1YDown&&rect2.origin.y<rect1YUp){
+            return 1;
+        }
+    }
+    
+    //如果rect2的点在rect1上
+    double rect2XLeft,rect2XRigth;
+    double rect2YUp,rect2YDown;
+    //rect2的四个边界
+    rect2XLeft = rect2.origin.x - rect2.size.width/2.0;
+    rect2XRigth = rect2.origin.x + rect2.size.width/2.0;
+    rect2YUp = rect2.origin.y + rect2.size.height/2.0;
+    rect2YDown = rect2.origin.y - rect2.size.height/2.0;
+    
+    if (rect1.origin.x>rect2XLeft&&rect1.origin.x<rect2XRigth) {
+        if(rect1.origin.y>rect2YDown&&rect1.origin.y<rect2YUp){
+            return 1;
+        }
+    }
+    
     return 0;
 }
 int isOneRectOnAnotherRect(Rectm rect1,Rectm rect2){
+    
+    //如果没相交，点在矩形内，一矩形在另一矩形内
+    if (isIntersect(rect1, rect2)==0&&isOnePointOnAnotherRect(rect1, rect2)) {
+        return 1;
+    }
     return 0;
 }
 
@@ -329,6 +398,47 @@ int isOneRectOnAnotherRect(Rectm rect1,Rectm rect2){
 
 int main(int argc, const char * argv[])
 {
+    
+    Sizem size1,size2;
+    Pointm point1,point2;
+    Rectm rect1,rect2;
+    
+    point1.x = 0;
+    point1.y = 0;
+    point2.x = 2;
+    point2.y = 2;
+    
+    size1.height = 8;
+    size1.width = 8;
+    size2.height = 2;
+    size2.width = 2;
+    
+    rect1.origin = point1;
+    rect1.size = size1;
+    rect2.origin = point2;
+    rect2.size = size2;
+    
+    if (isIntersect(rect1, rect2)) {
+        printf("两个矩形相交了\n");
+    }else{
+        printf("两个矩形没相交\n");
+    }
+    
+    if(isOnePointOnAnotherRect(rect1, rect2)){
+        printf("某矩形点在另一矩形中\n");
+    }else{
+        printf("某矩形点不在另一矩形中\n");
+    }
+    
+    if(isOneRectOnAnotherRect(rect1, rect2)){
+        printf("某矩形在另一矩形中\n");
+    }else{
+        printf("某矩形不在另一矩形中\n");
+    }
+    
+    
+    
+    
     return 0;
 }
 
