@@ -60,7 +60,7 @@
 //        }
 //        avgResult[i] = sum/5.0;
 //    }
-//
+//    
 //}
 ////(2) 找出有两门以上不及格的学生,并输出其学号和不及格课程的成绩;
 //
@@ -139,13 +139,13 @@
 //        }
 //        printf("\n");
 //    }
-//
+//    
 //}
 //
 //
 //
 //int main(){
-//
+//    
 //    StuScore stu[5];
 //    init(stu);
 //    showStudent(stu);
@@ -159,13 +159,13 @@
 ////            scanf("%d",&stu[i].score[j]);
 ////        }
 ////    }
-//
+//    
 //    double avgResult[3];
 //    avgForCourse(stu,avgResult);
 //    for (int i=0; i<3; i++) {
 //        printf("第%d门课的平均成绩是%.2lf\n",i+1,avgResult[i]);
 //    }
-//
+//    
 //    int flag[5];
 //    if (findBadStudent(stu, flag)) {
 //        for (int i=0; i<5; i++) {
@@ -180,7 +180,7 @@
 //            }
 //        }
 //    }
-//
+//    
 //    if(findGoodStudent(stu, flag)){
 //        for (int i=0; i<5; i++) {
 //            if (flag[i]==1) {
@@ -188,8 +188,8 @@
 //            }
 //        }
 //    }
-//
-//
+//    
+//    
 //    return 0;
 //}
 
@@ -226,7 +226,7 @@
 //    }
 //}
 //int main(){
-//
+//    
 //    Person p[4];
 //    int n;
 //    scanf("%d",&n);
@@ -239,8 +239,8 @@
 //        countTicks(p,temp);
 //    }
 //    showTicks(p);
-//
-//
+//    
+//    
 //}
 
 
@@ -252,9 +252,6 @@
 
 int main(){
     return 0;
-    1
-    1
-    1
 }
 
 //5.(***)创建一个 Size 结构体,包含 width,height 两个变量。 并写以下函数:
