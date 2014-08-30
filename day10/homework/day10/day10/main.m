@@ -21,8 +21,9 @@
 
 
 //6. (**)定义一个求圆面积的宏
+#define CIRCLEAREA(R) R*R*3.1415926
 //7. (**)定义一个求2个数平均数的宏
-
+#define AVG(A,B) (A+B)/2.0
 
 typedef struct student{
     int sno;
@@ -44,6 +45,12 @@ void swapStudent(Student *stu1,Student *stu2){
     stu2->score = stuTemp.score;
     strcpy(stu2->name, stuTemp.name);
 }
+//void swapStudent2(Student **stu1,Student **stu2){
+//    Student *stu;
+//    stu = *stu1;
+//    *stu1 = *stu2;
+//    *stu2 = stu;
+//}
 
 
 void init(Student *stu,int size){
@@ -127,13 +134,16 @@ int main(int argc, const char * argv[])
     int size = sizeof(stu)/sizeof(Student);
     init(stu, size);
     showAll(stu, size);
+    swapStudent(&stu[0], &stu[1]);
+    
+//    Student *stu1 = &stu[0];
+//    Student *stu2 = &stu[1];
+//    
+//    swapStudent2(&stu1, &stu2);
+    showAll(stu, size);
     
     printf("指定分数段的学生信息\n");
     showOnScore(stu, size, 70, 90);
-    
-//    swapStudent(&stu[0], &stu[1]);
-//    show(stu, size);
-    
     printf("按学号排序\n");
     sortBySno(stu, size);
     showAll(stu, size);
@@ -143,6 +153,10 @@ int main(int argc, const char * argv[])
     printf("按成绩排序\n");
     sortByScore(stu, size);
     showAll(stu, size);
+    
+    
+    printf("圆面积%lf\n",CIRCLEAREA(2));
+    printf("平均数%lf\n",AVG(2,4));
     
     
     
