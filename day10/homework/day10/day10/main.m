@@ -45,6 +45,12 @@ void swapStudent(Student *stu1,Student *stu2){
     stu2->score = stuTemp.score;
     strcpy(stu2->name, stuTemp.name);
 }
+void swapStudent3(Student *stu1,Student *stu2){
+    Student temp;
+    temp = *stu1;
+    *stu1 = *stu2;
+    *stu2 = temp;
+}
 //void swapStudent2(Student **stu1,Student **stu2){
 //    Student *stu;
 //    stu = *stu1;
@@ -135,11 +141,8 @@ int main(int argc, const char * argv[])
     init(stu, size);
     showAll(stu, size);
     swapStudent(&stu[0], &stu[1]);
-    
-//    Student *stu1 = &stu[0];
-//    Student *stu2 = &stu[1];
-//    
-//    swapStudent2(&stu1, &stu2);
+    showAll(stu, size);
+    swapStudent3(&stu[0], &stu[1]);
     showAll(stu, size);
     
     printf("指定分数段的学生信息\n");
