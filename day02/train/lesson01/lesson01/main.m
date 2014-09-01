@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+int comp(int *a,int *b)
+{
+    return*(int*)a-*(int*)b;
+}
+
 int main(int argc, const char * argv[])
 {
 //    printf("HI,ios");
@@ -35,17 +40,7 @@ int main(int argc, const char * argv[])
 //    int *p= &x;
 //    short m=*(p+4);
 //    printf("%c",m);
-    int a = 17;
-    int b = 285212672;
-    printf("%p\n",&a);
-    printf("%p\n",&b);
-    int *p = &b;
-    printf("%p\n",p);
-    char *pp = (char *)p;
-    pp+=2;
-    int *m =(int *)pp;
-    printf("%p\n",m);
-    printf("%d",*m);
+
 
 //    int x = 285212705;
 //    printf("%c\n",x);
@@ -62,6 +57,14 @@ int main(int argc, const char * argv[])
 //    scanf("%c %c",&a,&b);
 //    //getchar();
 //    printf("%c %c",a,b);
+    
+    
+    int a[] = {8,1,2,3,6,4,8,5,1};
+    qsort(a, sizeof(a)/sizeof(int),sizeof(int) , comp);
+    for (int i=0; i<sizeof(a)/sizeof(int); i++) {
+        printf("%d",a[i]);
+    }
+    
     
     
 }
