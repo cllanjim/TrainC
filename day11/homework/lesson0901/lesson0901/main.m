@@ -45,7 +45,7 @@ int main(int argc, const char * argv[])
     }
     printf("\n");
     for (int i=0; i<4; i++) {
-        for (int j=0; j<4; j++) {
+        for (int j=0; j<4; j++) { 
             b[i][j] =a[j][i];
         }
     }
@@ -56,6 +56,22 @@ int main(int argc, const char * argv[])
         }
         printf("\n");
     }
+    
+    
+    int max = 0;
+    int row = 0,column = 0;
+    for (int i=0; i<4; i++) {
+        for (int j=0; j<4; j++) {
+            if((i==0&&j==0)||max<a[i][j]){
+                max = a[i][j];
+                row = j;
+                column = i;
+            }
+        }
+    }
+    printf("max = %d, row = %d, column = %d",max,row,column);
+    
+    
     
     return 0;
 }

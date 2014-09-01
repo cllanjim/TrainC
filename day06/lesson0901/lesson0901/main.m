@@ -10,13 +10,20 @@
 
 int main(int argc, const char * argv[])
 {
-
-    @autoreleasepool {
-        
-        // insert code here...
-        NSLog(@"Hello, World!");
-        
+    char name[7][20];
+    for (int i=0; i<7; i++) {
+        scanf("%s",name[i]);
     }
+    int max =0 ;
+    int flag = 0;
+    for (int i=0; i<7; i++) {
+        int len = (int)strlen(name[i]);
+        if(i==0||len>max){
+            max = len;
+            flag = i;
+        }
+    }
+    printf("name is %s",name[flag]);
     return 0;
 }
 
