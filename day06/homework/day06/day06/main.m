@@ -102,7 +102,7 @@ int main(){
                 max = num[i][j];
             }
             //找列最小值
-            if(i==0||min<num[j][i]){
+            if(j==0||min>num[j][i]){
                 min = num[j][i];
             }
         }

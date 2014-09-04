@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+int change(const int a,const int b){
+    return a>b;
+}
+
 int main(int argc, const char * argv[])
 {
 //    int a[20];
@@ -29,49 +33,53 @@ int main(int argc, const char * argv[])
 //    for (int i=0; i<20; i++) {
 //        printf("%d ",a[i]);
 //    }
+//    
+//    
+//    int a[4][4],b[4][4];
+//    for (int i=0; i<4; i++) {
+//        for (int j=0; j<4; j++) {
+//            a[i][j] =arc4random()%10+10;
+//        }
+//    }
+//    for (int i=0; i<4; i++) {
+//        for (int j=0; j<4; j++) {
+//            printf("%2d ",a[i][j]);
+//        }
+//        printf("\n");
+//    }
+//    printf("\n");
+//    for (int i=0; i<4; i++) {
+//        for (int j=0; j<4; j++) { 
+//            b[i][j] =a[j][i];
+//        }
+//    }
+//    printf("\n");
+//    for (int i=0; i<4; i++) {
+//        for (int j=0; j<4; j++) {
+//            printf("%2d ",b[i][j]);
+//        }
+//        printf("\n");
+//    }
+//    
+//    
+//    int max = 0;
+//    int row = 0,column = 0;
+//    for (int i=0; i<4; i++) {
+//        for (int j=0; j<4; j++) {
+//            if((i==0&&j==0)||max<a[i][j]){
+//                max = a[i][j];
+//                row = j;
+//                column = i;
+//            }
+//        }
+//    }
+//    printf("max = %d, row = %d, column = %d",max,row,column);
     
+    const int a;
     
-    int a[4][4],b[4][4];
-    for (int i=0; i<4; i++) {
-        for (int j=0; j<4; j++) {
-            a[i][j] =arc4random()%10+10;
-        }
-    }
-    for (int i=0; i<4; i++) {
-        for (int j=0; j<4; j++) {
-            printf("%2d ",a[i][j]);
-        }
-        printf("\n");
-    }
-    printf("\n");
-    for (int i=0; i<4; i++) {
-        for (int j=0; j<4; j++) { 
-            b[i][j] =a[j][i];
-        }
-    }
-    printf("\n");
-    for (int i=0; i<4; i++) {
-        for (int j=0; j<4; j++) {
-            printf("%2d ",b[i][j]);
-        }
-        printf("\n");
-    }
+    int x = change(10, 20);
     
-    
-    int max = 0;
-    int row = 0,column = 0;
-    for (int i=0; i<4; i++) {
-        for (int j=0; j<4; j++) {
-            if((i==0&&j==0)||max<a[i][j]){
-                max = a[i][j];
-                row = j;
-                column = i;
-            }
-        }
-    }
-    printf("max = %d, row = %d, column = %d",max,row,column);
-    
-    
+    printf("%d",x);
     
     return 0;
 }

@@ -59,11 +59,11 @@ int main(int argc, const char * argv[])
 //    printf("%c %c",a,b);
     
     
-    int a[] = {8,1,2,3,6,4,8,5,1};
-    qsort(a, sizeof(a)/sizeof(int),sizeof(int) , comp);
-    for (int i=0; i<sizeof(a)/sizeof(int); i++) {
-        printf("%d",a[i]);
-    }
+//    int a[] = {8,1,2,3,6,4,8,5,1};
+//    qsort(a, sizeof(a)/sizeof(int),sizeof(int) , comp);
+//    for (int i=0; i<sizeof(a)/sizeof(int); i++) {
+//        printf("%d",a[i]);
+//    }
     
     
     

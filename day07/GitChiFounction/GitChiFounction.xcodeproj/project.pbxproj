@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C27C503A19B5B5F5003BC9FF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27C503919B5B5F5003BC9FF /* Cocoa.framework */; };
+		C27C504419B5B5F5003BC9FF /* GitChiFounction.m in Sources */ = {isa = PBXBuildFile; fileRef = C27C504319B5B5F5003BC9FF /* GitChiFounction.m */; };
+		C27C504B19B5B5F5003BC9FF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27C504A19B5B5F5003BC9FF /* XCTest.framework */; };
+		C27C504C19B5B5F5003BC9FF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27C503919B5B5F5003BC9FF /* Cocoa.framework */; };
+		C27C504F19B5B5F5003BC9FF /* libGitChiFounction.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C27C503619B5B5F5003BC9FF /* libGitChiFounction.a */; };
+		C27C505519B5B5F5003BC9FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C27C505319B5B5F5003BC9FF /* InfoPlist.strings */; };
+		C27C505719B5B5F5003BC9FF /* GitChiFounctionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C27C505619B5B5F5003BC9FF /* GitChiFounctionTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C27C504D19B5B5F5003BC9FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C27C502E19B5B5F5003BC9FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C27C503519B5B5F5003BC9FF;
+			remoteInfo = GitChiFounction;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C27C503619B5B5F5003BC9FF /* libGitChiFounction.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGitChiFounction.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C27C503919B5B5F5003BC9FF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C27C503C19B5B5F5003BC9FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C27C503D19B5B5F5003BC9FF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C27C503E19B5B5F5003BC9FF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		C27C504119B5B5F5003BC9FF /* GitChiFounction-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GitChiFounction-Prefix.pch"; sourceTree = "<group>"; };
+		C27C504219B5B5F5003BC9FF /* GitChiFounction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GitChiFounction.h; sourceTree = "<group>"; };
+		C27C504319B5B5F5003BC9FF /* GitChiFounction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitChiFounction.m; sourceTree = "<group>"; };
+		C27C504919B5B5F5003BC9FF /* GitChiFounctionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitChiFounctionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C27C504A19B5B5F5003BC9FF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C27C505219B5B5F5003BC9FF /* GitChiFounctionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GitChiFounctionTests-Info.plist"; sourceTree = "<group>"; };
+		C27C505419B5B5F5003BC9FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C27C505619B5B5F5003BC9FF /* GitChiFounctionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitChiFounctionTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C27C503319B5B5F5003BC9FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C27C503A19B5B5F5003BC9FF /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C27C504619B5B5F5003BC9FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C27C504C19B5B5F5003BC9FF /* Cocoa.framework in Frameworks */,
+				C27C504B19B5B5F5003BC9FF /* XCTest.framework in Frameworks */,
+				C27C504F19B5B5F5003BC9FF /* libGitChiFounction.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C27C502D19B5B5F5003BC9FF = {
+			isa = PBXGroup;
+			children = (
+				C27C503F19B5B5F5003BC9FF /* GitChiFounction */,
+				C27C505019B5B5F5003BC9FF /* GitChiFounctionTests */,
+				C27C503819B5B5F5003BC9FF /* Frameworks */,
+				C27C503719B5B5F5003BC9FF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C27C503719B5B5F5003BC9FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C27C503619B5B5F5003BC9FF /* libGitChiFounction.a */,
+				C27C504919B5B5F5003BC9FF /* GitChiFounctionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C27C503819B5B5F5003BC9FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C27C503919B5B5F5003BC9FF /* Cocoa.framework */,
+				C27C504A19B5B5F5003BC9FF /* XCTest.framework */,
+				C27C503B19B5B5F5003BC9FF /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C27C503B19B5B5F5003BC9FF /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C27C503C19B5B5F5003BC9FF /* Foundation.framework */,
+				C27C503D19B5B5F5003BC9FF /* CoreData.framework */,
+				C27C503E19B5B5F5003BC9FF /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		C27C503F19B5B5F5003BC9FF /* GitChiFounction */ = {
+			isa = PBXGroup;
+			children = (
+				C27C504219B5B5F5003BC9FF /* GitChiFounction.h */,
+				C27C504319B5B5F5003BC9FF /* GitChiFounction.m */,
+				C27C504019B5B5F5003BC9FF /* Supporting Files */,
+			);
+			path = GitChiFounction;
+			sourceTree = "<group>";
+		};
+		C27C504019B5B5F5003BC9FF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C27C504119B5B5F5003BC9FF /* GitChiFounction-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C27C505019B5B5F5003BC9FF /* GitChiFounctionTests */ = {
+			isa = PBXGroup;
+			children = (
+				C27C505619B5B5F5003BC9FF /* GitChiFounctionTests.m */,
+				C27C505119B5B5F5003BC9FF /* Supporting Files */,
+			);
+			path = GitChiFounctionTests;
+			sourceTree = "<group>";
+		};
+		C27C505119B5B5F5003BC9FF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C27C505219B5B5F5003BC9FF /* GitChiFounctionTests-Info.plist */,
+				C27C505319B5B5F5003BC9FF /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C27C503419B5B5F5003BC9FF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C27C503519B5B5F5003BC9FF /* GitChiFounction */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C27C505A19B5B5F6003BC9FF /* Build configuration list for PBXNativeTarget "GitChiFounction" */;
+			buildPhases = (
+				C27C503219B5B5F5003BC9FF /* Sources */,
+				C27C503319B5B5F5003BC9FF /* Frameworks */,
+				C27C503419B5B5F5003BC9FF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GitChiFounction;
+			productName = GitChiFounction;
+			productReference = C27C503619B5B5F5003BC9FF /* libGitChiFounction.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C27C504819B5B5F5003BC9FF /* GitChiFounctionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C27C505D19B5B5F6003BC9FF /* Build configuration list for PBXNativeTarget "GitChiFounctionTests" */;
+			buildPhases = (
+				C27C504519B5B5F5003BC9FF /* Sources */,
+				C27C504619B5B5F5003BC9FF /* Frameworks */,
+				C27C504719B5B5F5003BC9FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C27C504E19B5B5F5003BC9FF /* PBXTargetDependency */,
+			);
+			name = GitChiFounctionTests;
+			productName = GitChiFounctionTests;
+			productReference = C27C504919B5B5F5003BC9FF /* GitChiFounctionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C27C502E19B5B5F5003BC9FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Liushuai;
+			};
+			buildConfigurationList = C27C503119B5B5F5003BC9FF /* Build configuration list for PBXProject "GitChiFounction" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C27C502D19B5B5F5003BC9FF;
+			productRefGroup = C27C503719B5B5F5003BC9FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C27C503519B5B5F5003BC9FF /* GitChiFounction */,
+				C27C504819B5B5F5003BC9FF /* GitChiFounctionTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C27C504719B5B5F5003BC9FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C27C505519B5B5F5003BC9FF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C27C503219B5B5F5003BC9FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C27C504419B5B5F5003BC9FF /* GitChiFounction.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C27C504519B5B5F5003BC9FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C27C505719B5B5F5003BC9FF /* GitChiFounctionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C27C504E19B5B5F5003BC9FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C27C503519B5B5F5003BC9FF /* GitChiFounction */;
+			targetProxy = C27C504D19B5B5F5003BC9FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C27C505319B5B5F5003BC9FF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C27C505419B5B5F5003BC9FF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C27C505819B5B5F6003BC9FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C27C505919B5B5F6003BC9FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C27C505B19B5B5F6003BC9FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GitChiFounction/GitChiFounction-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C27C505C19B5B5F6003BC9FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GitChiFounction/GitChiFounction-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C27C505E19B5B5F6003BC9FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GitChiFounction/GitChiFounction-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GitChiFounctionTests/GitChiFounctionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C27C505F19B5B5F6003BC9FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GitChiFounction/GitChiFounction-Prefix.pch";
+				INFOPLIST_FILE = "GitChiFounctionTests/GitChiFounctionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C27C503119B5B5F5003BC9FF /* Build configuration list for PBXProject "GitChiFounction" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C27C505819B5B5F6003BC9FF /* Debug */,
+				C27C505919B5B5F6003BC9FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C27C505A19B5B5F6003BC9FF /* Build configuration list for PBXNativeTarget "GitChiFounction" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C27C505B19B5B5F6003BC9FF /* Debug */,
+				C27C505C19B5B5F6003BC9FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C27C505D19B5B5F6003BC9FF /* Build configuration list for PBXNativeTarget "GitChiFounctionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C27C505E19B5B5F6003BC9FF /* Debug */,
+				C27C505F19B5B5F6003BC9FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C27C502E19B5B5F5003BC9FF /* Project object */;
+}

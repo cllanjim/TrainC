@@ -136,15 +136,25 @@ void removeDigit(char *dest,char *src){
     }
     *(dest+j) = '\0';
 }
-
+void removeDigit2(char *src){
+    int j=0;
+    for (int i=0; *(src+i)!='\0'; i++) {
+        if (!(*(src+i)>='0'&&*(src+i)<='9')) {
+            *(src+j) = *(src+i);
+            j++;
+        }
+    }
+    *(src+j) = '\0';
+}
 
 int main(){
     
     
-    char s[] = "aa8d9df80as9df09saf089s";
-    char dest[]={};
-    removeDigit(dest, s);
-    printf("%s",dest);
+    char s[] = "I 12l234o4ve p345r53o4g345ra345mm5i4n5g,I 345w534an534t5 to 4be a345 G5e4e4k!";
+//    char dest[]={};
+//    removeDigit(dest,s);
+    removeDigit2(s);
+    printf("%s",s);
     
     return 0;
 }

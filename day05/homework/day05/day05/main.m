@@ -304,21 +304,28 @@
 //串中只含字母和空格,空格用来分隔不同单词。 比如:"ni hao world”,最长单词是 world。
 
 //int main(){
-//    char string[201];
+////    char string[201];
 //    int flag=0,count=0,i=0,max=0;
 //    //scanf("%s",string);
-//    gets(string);
+////    gets(string);
+//    char string[] = "I love my girlfriend";
 //    while (string[i]!='\0'){
 //        if (string[i]!=' ') {
 //            //printf("%c ",string[i]);
 //            count++;
-//        }else{
-//            if (count>max) {
-//                max = count;
-//                flag=i-count;
-//                count=0;
-//            }
-//            
+//        }
+//        if(count>max&&string[i]==' ') {
+//            max = count;
+//            flag=i-count;
+//            count=0;
+//        }
+//        if(count>max&&i==strlen(string)-1) {
+//            max = count;
+//            flag=i-count+1;
+//            count=0;
+//        }
+//        if(string[i]==' '){
+//            count =0;
 //        }
 //        i++;
 //    }
@@ -328,7 +335,7 @@
 //    }
 //    
 //    return 0;
-//
+//}
 
 
 
