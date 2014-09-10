@@ -34,8 +34,44 @@ int main(int argc, const char * argv[])
 //    printf("%d",*m);
     
     
-    int *p = NULL;
-    printf("%p",p);
+//    int *p = NULL;
+//    printf("%p",p);
+    
+//    char *p[10] = {" "," "};
+//    int (*pp)[10];
+//    for (int i=0; i<10; i++) {
+//        printf("%d,%p\n",i,&pp[i]);
+//    }
+    
+    
+    double *head = NULL;
+    double salary = 8000.75;
+    head = &salary;
+    printf("%p\n",&salary);
+    printf("%p\n",head);
+    printf("%lf\n",salary);
+    printf("%lf\n",*head);
+    double *tail = NULL;
+    tail = head;
+    printf("%lf\n",*tail);
+    *tail = 3023.25;
+    printf("%lf\n",*head);
+    int age = 28;
+    head = &age;
+    printf("%d\n",*head);
+    *tail+=100;
+    printf("%lu\n",sizeof(salary));
+    printf("%lu\n",sizeof(head));
+    printf("%lu\n",sizeof(tail));
+    printf("%lf",DBL_MAX);
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     return 0;

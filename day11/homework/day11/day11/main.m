@@ -29,6 +29,7 @@
 //            max=*(a+i);
 //    }
 //    printf("max=%d",max);
+//    free(a);
 //    return 0;
 //}
 
@@ -47,7 +48,6 @@
 
 //2. (***)已知一个数组 20 个元素(随机 1 到 100 之间包含 1 和 100),求大
 //于平均数的元素个数,并动态生成一个新数组保存(提示:malloc 出 20 个元素保存)
-
 
 
 //int main(){
@@ -80,6 +80,7 @@
 //    for (int i=0; i<count; i++) {
 //        printf("%d ",*(result+i));
 //    }
+//    free(result);
 //    return 0;
 //}
 
@@ -87,7 +88,36 @@
 
 
 
-
+//查找单词 返回单词的首地址      参数1 从该地址开始搜索单词 参数2 单词长度的首地址
+char *findWord(char *flag,int *wordLength){
+    int i=0;
+    int count = 0;
+    char *word = NULL;
+    while (*(flag+i)!='\0') {
+        
+        if(*(flag+i)!=' '){
+            if (count==0) {
+                word = flag+i;
+            }
+            count++;
+        }
+        if(*(flag+i)==' '){
+            if (count==0) {
+                i++;
+                continue;
+            }
+            break;
+        }
+        i++;
+        if (*(flag+i)=='\0') {
+            *wordLength = count;
+            return word;
+        }
+        
+    }
+    *wordLength = count;
+    return word;
+}
 
 
 
@@ -98,9 +128,72 @@
 
 //3. (****)有一段文本,将文本中的所有单词,存放到一个字符串数组中。 (要求占用内存最少)
 
-
-
 int main(){
+    
+    char *str;
+    gets(str);
+    printf("%s\n",str);
+    int wordLength =0;
+    char *w = str;
+    int size =0;//记录单词数组总共开辟空间大小
+    char *words = NULL;
+    int wordCount=0;
+    while(w!=NULL){
+        w = findWord(w+wordLength, &wordLength);
+        if (w==NULL) {
+            break;
+        }
+        wordCount++;
+        for (int i=0; i<wordLength; i++) {
+            printf("%c",*(w+i));
+        }
+        
+        //发现第一个单词 开辟存单词的空间 和存单词首地址的空间
+        if(w==str){
+            words = malloc(sizeof(char)*wordLength+1);
+            //赋值
+            memcpy(words, w, wordLength);
+            *(words+wordLength) = '\0';
+            size = size+wordLength+1;
+        }else{
+            //重新分配内存大小为单词开辟空间
+            words = realloc(words, sizeof(char)*(size+wordLength+1));
+            //赋值
+            memcpy(words+size, w, wordLength);
+            *(words+size+wordLength) = '\0';
+            size = size+wordLength+1;
+            
+        }
+        printf("\n");
+    }
+    
+    //定义指针数组 分别指向单词的首地址
+    char **strings = malloc(sizeof(char *)*wordCount);
+    int flagc = 0;//记录当前已经移动到第几个单词
+    int length = 0;//记录当前单词的长度
+    int j=0;
+    int i=0;
+    while (flagc<wordCount) {
+        if(words[i]!='\0'){
+            length++;
+        }
+        else{
+            flagc+=1;
+            strings[j]=words+i-length;
+            length = 0;
+            j++;
+        }
+        i++;
+    }
+    
+    printf("结果\n");
+    for (int i=0; i<wordCount; i++) {
+        printf("%s ",strings[i]);
+    }
+    
+    free(strings);
+    free(words);
+    
     
     return 0;
 }

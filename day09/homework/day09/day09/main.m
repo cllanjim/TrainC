@@ -8,51 +8,64 @@
 
 #import <Foundation/Foundation.h>
 
-
+typedef char* charp;
 //第八讲:指针》
 //1. (**)编写一个函数,交换 2 个浮点数。
 //1. (***)在主函数中输入6个字符串(二维数组),对他们按从小到大的 顺序,然后输出这 6 个已经排好序的字符串。要求使用指针数组进行处理。
 //2. (****)面试题: 有一字符串中包含数字与字符,请编程去除数字
 
 //1. (**)编写一个函数,交换 2 个浮点数。
-//void swap(double *a,double *b){
-//    int temp = *b;
-//    *b = *a;
-//    *a = temp;
-//}
+void swap(double *a,double *b){
+    int temp = *b;
+    *b = *a;
+    *a = temp;
+}
 //
 //
-////1. (***)在主函数中输入6个字符串(二维数组),对他们按从小到大的 顺序,然后输出这 6 个已经排好序的字符串。要求使用指针数组进行处理。
-//
-//void sortStrArray(char str[6][20]){
-//    for (int i=0; i<6; i++) {
-//        for (int j=0; j<6-1-i; j++) {
-//            if(strcmp(*(str+j), *(str+j+1))<0){
-//                char temp[20];
-//                strcpy(temp, *(str+j));
-//                strcpy(*(str+j), *(str+j+1));
-//                strcpy(*(str+j+1), temp);
-//            }
-//        }
-//    }
-//}
-//
-//void sortStrArrayByPointer(char *str[6]){
-//    for (int i=0; i<6; i++) {
-//        for (int j=0; j<6-1-i; j++) {
-//            if(strcmp(*(str+j), *(str+j+1))>0){
-//                char temp[20];
-//                strcpy(temp, *(str+j));
-//                strcpy(*(str+j), *(str+j+1));
-//                strcpy(*(str+j+1), temp);
-//            }
-//        }
-//    }
-//}
-//
-//
-//int main(int argc, const char * argv[])
-//{
+//1. (***)在主函数中输入6个字符串(二维数组),对他们按从小到大的 顺序,然后输出这 6 个已经排好序的字符串。要求使用指针数组进行处理。
+
+void sortStrArray(char str[6][20]){
+    for (int i=0; i<6; i++) {
+        for (int j=0; j<6-1-i; j++) {
+            if(strcmp(str[j], str[j+1])<0){
+                char temp[20];
+                strcpy(temp, str[j]);
+                strcpy(str[j], str[j+1]);
+                strcpy(str[j+1], temp);
+            }
+        }
+    }
+}
+//用指针数组排序
+void sortStrArrayByPointer(char *str[]){
+    for (int i=0; i<6; i++) {
+        for (int j=0; j<6-1-i; j++) {
+            if(strcmp(*(str+j), *(str+j+1))>0){
+                char temp[20];
+                strcpy(temp, *(str+j));
+                strcpy(*(str+j), *(str+j+1));
+                strcpy(*(str+j+1), temp);
+            }
+        }
+    }
+}
+//用数组指针排序
+void sortStrArrayByArrayPointer(char (*str)[20]){
+    for (int i=0; i<6; i++) {
+        for (int j=0; j<6-1-i; j++) {
+            if(strcmp(*(str+j), *(str+j+1))<0){
+                char temp[20];
+                strcpy(temp, *(str+j));
+                strcpy(*(str+j), *(str+j+1));
+                strcpy(*(str+j+1), temp);
+            }
+        }
+    }
+}
+
+
+int main(int argc, const char * argv[])
+{
 //    double a,b;
 //    a = 3.0;
 //    b = 4.0;
@@ -61,40 +74,47 @@
 //    printf("交换后 %.2lf %.2lf\n",a,b);
 //    
 //    char str[6][20];
-//    
+//printf("%d",sizeof(str)/sizeof(str[0]));
+    
 //    for (int i=0; i<6; i++) {
-//        printf("str[%d]的地址为 %ld\n",i,(long)str[i]);
+//        printf("str[%d]的数组地址为 %ld\n",i,(long)str[i]);
 //    }
-//    
+//    for (int i=0; i<6; i++) {
+//        printf("str[%d][0]的地址为 %ld\n",i,(long)&str[i][0]);
+//    }
+    
 //    for (int i=0; i<6; i++) {
 //        scanf("%s",str[i]);
 //    }
+//    printf("二维排序后\n");
 //    sortStrArray(str);
-//    
 //    for (int i=0; i<6; i++) {
 //        printf("%s\n",str[i]);
 //    }
-//    printf("\n");
+//    
+//    printf("用指针数组又排序后\n");
 //    
 //    
 //    //定义指针数组
 //    char *strp[6];
-//    //将二维数组中的每个首地址的值给指针数组
+//    //将二维数组中的 每个一维数组的首地址的值 给指针数组
 //    for (int i=0; i<6; i++) {
 //        strp[i] = str[i];
 //    }
 //    //将指针数组首地址传入
 //    sortStrArrayByPointer(strp);
-//    //输出排序结果
 //    for (int i=0; i<6; i++) {
 //        printf("%s\n",str[i]);
 //    }
 //    
-//    
-//    
-//    
-//    return 0;
-//}
+//    printf("用数组指针又排序后\n");
+//    sortStrArrayByArrayPointer(str);
+//    for (int i=0; i<6; i++) {
+//        printf("%s\n",str[i]);
+//    }
+    
+    return 0;
+}
 
 
 
@@ -147,23 +167,14 @@ void removeDigit2(char *src){
     *(src+j) = '\0';
 }
 
-int main(){
-    
-    
-    char s[] = "I 12l234o4ve p345r53o4g345ra345mm5i4n5g,I 345w534an534t5 to 4be a345 G5e4e4k!";
-//    char dest[]={};
-//    removeDigit(dest,s);
-    removeDigit2(s);
-    printf("%s",s);
-    
-    return 0;
-}
-
-
-
-
-
-
-
-
-
+//int main(){
+//    
+//    
+//    char s[] = "I 12l234o4ve p345r53o4g345ra345mm5i4n5g,I 345w534an534t5 to 4be a345 G5e4e4k!";
+////    char dest[]={};
+////    removeDigit(dest,s);
+//    removeDigit2(s);
+//    printf("%s",s);
+//    
+//    return 0;
+//}
