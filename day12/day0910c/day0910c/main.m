@@ -8,7 +8,52 @@
 
 #import <Foundation/Foundation.h>
 
+#define N 3
+#define Y(n) ((4)*n)
 
+
+
+
+typedef int (* PFUN)(int,int);
+
+typedef struct funlist{
+    
+    char name[50];
+    PFUN pf;
+    
+}Funlist;
+
+int sum(int x,int y){
+    return x+y;
+}
+int mul(int x,int y){
+    return x*y;
+}
+int max(int x,int y){
+    return x>y?x:y;
+}
+Funlist list[]={
+    {"sum",sum},
+    {"mul",mul},
+    {"max",max}
+};
+
+PFUN findFunByName(char *name){
+    for (int i=0; i<sizeof(list)/sizeof(list[0]); i++) {
+        if (strcmp(list[i].name, name)==0) {
+            return list[i].pf;
+        }
+    }
+    return NULL;
+}
+
+int getValue(int a,int b,PFUN p){
+    if(p!=NULL){
+        return p(a,b);
+    }else{
+            return 0;
+    }
+}
 
 //typedef struct student{
 //    char name[40];
@@ -101,26 +146,57 @@ int main(int argc, const char * argv[])
 //        p=sum;
 //    }
 //    printf("%d",p(3,5));
-    
-    
-    printf("%d",getValue(3,5,max));
-    
-    Student stu[5]={{"aa",20},{"hh",19},{"pp",20},{"aaa",100},{"uuu",90}};
-    findStudent(stu, sizeof(stu)/sizeof(stu[0]), changeName);
-//    showAll(stu,sizeof(stu)/sizeof(stu[0]));
-    
-//    double a=3,b=4;
 //    
-//    allChangeTwoNum(&a, &b, changeWord);
-//    printf("%lf",a);
-//    printf("%lf",b);
+//    
+//    printf("%d",getValue(3,5,max));
+//    
+//    Student stu[5]={{"aa",20},{"hh",19},{"pp",20},{"aaa",100},{"uuu",90}};
+//    findStudent(stu, sizeof(stu)/sizeof(stu[0]), changeName);
+////    showAll(stu,sizeof(stu)/sizeof(stu[0]));
+//    
+////    double a=3,b=4;
+////    
+////    allChangeTwoNum(&a, &b, changeWord);
+////    printf("%lf",a);
+////    printf("%lf",b);
+//    
+//    sortArray(stu, sizeof(stu)/sizeof(stu[0]), compareByScore);
+//    showAll(stu, sizeof(stu)/sizeof(stu[0]));
     
-    sortArray(stu, sizeof(stu)/sizeof(stu[0]), compareByScore);
-    showAll(stu, sizeof(stu)/sizeof(stu[0]));
+//    
+//    PFUN p = findFunByName("max");
+//    int result = getValue(3, 5, p);
+//    printf("%d",result);
+//    
+//    int a,b,c=3;
+//    
+////    (a=c)||(b=c);
+////    printf("%d %d",a,b);
+////    (a=c)&&(b=c);
+////    printf("%d %d",a,b);
+//    
+//    printf("%d",2*(N+Y(5-5)));
+//
+//    int k;
+//    printf("%d",k=3);
+//
+    
+//    
+//    int i,k;
+//    for (i=0,k=-1; k=-1; i++,k++) {
+//        printf("*\n");
+//    }
+    
+//    int a,x,y;
+//    
+//    a=(x=y=30,x=100,y*5,x*y);
+//    printf("%d\n",a);
     
     
     
-    
+    printf("%f",1.0/2);
+    int a;
+    a=0x12;
     
     return 0;
 }
